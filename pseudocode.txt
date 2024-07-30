@@ -1,0 +1,46 @@
+No 3
+Function Fibonacci(n)
+    Create an empty list named fib
+
+    If n <= 0
+        Return fib (empty list)
+
+    Add 1 to fib
+    If n == 1
+        Return fib (list with one element: 1)
+
+    Add another 1 to fib
+
+    While True
+        Set nextValue to the sum of the last two elements in fib
+        If nextValue > n
+            Exit the loop
+        Add nextValue to fib
+
+    Return fib
+
+
+No 4
+Class Program
+    Function Main()
+        Set n to 3
+        Call PrintStars(n)
+
+    Function PrintStars(n)
+        For each integer i from 1 to n (inclusive)
+            Set stars to a string consisting of (2 * i - 1) asterisks
+            Print stars
+
+No 5
+Class Program
+    Function Main()
+        Set input1 to 5
+        Set input2 to 4
+        Set result to PadNumber(input1, input2)
+        
+        Print result
+
+    Function PadNumber(input1, input2)
+        Convert input1 to string and assign to numString
+        Pad numString on the left with '0' until its length is input2 and assign to paddedNumber
+        Return paddedNumber
