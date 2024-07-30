@@ -1,0 +1,9 @@
+select b.kodebrg, b.namabrg, sum(j.jumlah) as 'jml_jual'
+    from barang as b
+    join jual as j using (kodebrg)
+group by (b.kodebrg, b.namabrg) order by 'jml_jual' DESC
+
+select e.kodebarang, e.stockakhir from
+    (select kodebarang, max(tanggal), stockakhir from historistockbarang
+        groupby kodebarang
+    ) as e
